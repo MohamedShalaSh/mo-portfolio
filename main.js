@@ -168,3 +168,12 @@ document.querySelector("#tobot").addEventListener("click", () => {
 document.querySelector("#close6").addEventListener("click", () => {
     bot.style.display=""
 });
+//when hover in div slide
+slide.addEventListener("mouseover",()=>{
+    Rarrow.style.display="block"
+    Larrow.style.display="block"
+})
+slide.addEventListener("mouseout",()=>{
+    Rarrow.style.display=""
+    Larrow.style.display=""
+})
