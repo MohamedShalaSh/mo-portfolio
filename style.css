@@ -961,6 +961,56 @@ footer p{
 .bot #msg{
     margin-top: .5cm;
 }
+/* _____________________slide_____________________________________________*/
+.slide{
+    width: 80%;
+    display: flex;
+    overflow-x: scroll;
+    margin: 0 auto;
+    margin-bottom: 1cm;
+    scroll-behavior: smooth;
+}
+.slide img{
+    width: 350px;
+    margin: 1cm .5cm;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.slide::-webkit-scrollbar{
+    height: 5px;
+    background-color: #171e27;
+}
+.slide::-webkit-scrollbar-thumb{
+    background-color: #171e27;
+}
+.arrow-left-slide{
+position: absolute;
+margin-left: 1cm;
+margin-top: 3.2cm;
+font-size: 27px;
+padding: 10px 7px;
+color: #000;
+background-color: #fff;
+display: none;
+}
+.arrow-right-slide{
+    position: absolute;
+    margin-left: 77%;
+    margin-top: 3.2cm;
+    font-size: 27px;
+    padding: 10px 7px;
+    color: #000;
+    background-color: #fff;
+    display: none;
+}
+.arrow-slide:hover{
+    background-color: #4d8fe6;
+    cursor: pointer;
+}
+.slide .a{
+    position: absolute;
+    margin-left: 75%;
+}
 /* MEDIA RESPONSIVE______________________________________________________ */
 @media(max-width:1180px){
     .works{
@@ -997,6 +1047,18 @@ footer p{
     }
     .contact .right form{
         width: 90%;
+    }
+     .slide img{
+        width: 200px;
+    }
+    .arrow-right-slide{
+        margin-top: 2cm;
+    }
+    .arrow-left-slide{
+        margin-top: 2cm;
+    }
+    .slide .a{
+        margin-left: 70%;
     }
 }
 @media(max-width:640px){
