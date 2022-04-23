@@ -9,6 +9,12 @@
 .dark-mode header ul a{
     color: #000;
 }
+.dark-mode header ul a:hover{
+    color: #fff;
+}
+.dark-mode header .active{
+    color: #fff;
+}
 .dark-mode .aboutBTN{
     background-color: rgba(255, 255, 255, 0.95);
 }
@@ -110,4 +116,12 @@
 .dark-mode .bot .n{
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.164);
+}
+/* slide */
+.dark-mode .slide::-webkit-scrollbar{
+    height: 5px;
+    background-color: rgb(229, 229, 229);
+}
+.dark-mode .slide::-webkit-scrollbar-thumb{
+    background-color: rgb(229, 229, 229);
 }
