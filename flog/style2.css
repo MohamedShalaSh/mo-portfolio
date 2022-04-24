@@ -4,16 +4,17 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #000;
+    background-color: #171e27;
+    font-family: sans-serif;
 }
 header{
-    background-color: #110d0d;
+    background-color: #121a23;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 1.8cm;
+    box-shadow: 0 1px 20px #fff;
     border: none;
-    border-bottom: 1px solid #fff;
     margin-bottom: 30px;
 }
 header ul{
@@ -25,70 +26,63 @@ header ul li{
     padding: 10px 20px;
 }
 header h3{
-    color: orange;
+    color: #fff;
     margin-right: 30px;
     animation: title 2s infinite linear;
+    padding: 3px;
 }
 header h2{
     margin-left: 30px;
     color: #fff;
-    font-size: 20px;
-    padding: 5px;
-    background-color: orange;
+    font-size: 16px;
+    padding: 5px 10px;
+    background-color: #2570d3;
     border-radius: 10px;
+    cursor: pointer;
 }
 header a{
     text-decoration: none;
 }
 header li a{
-    font-size: 17px;
-    color: orange;
-    padding: 5px;
+    font-size: 16px;
+    color: #fff;
+    padding: 5px 10px;
     border-radius: 10px;
+    transition: all .3s;
 }
 header li a:hover{
-    background-color: orange;
-    color: #fff;
+    background-color: #2570d3;
 }
-.a1:visited{
-    background-color: orange;
-    color: #fff;
+.a1{
+    background-color: #2570d3;
 }
 @keyframes title{
-    from{
-        color: orange;
-        transform: rotate(-3deg);
-        border-top: 1px solid orange;
+    0%,100%{
+        border-left: .5px solid #2570d3;
     }
-    to{
-        color: orangered;
-        transform: rotate(3deg);
-        border-bottom: 1px solid orange;
+    25%{
+        border-bottom: .5px solid #2570d3;
+    }
+    50%{
+        border-right: .5px solid #2570d3;
+    }
+    75%{
+        border-top: .5px solid #2570d3;
     }
 }
 .images{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    margin: 0 15px;
+    text-align: center;
 }
 .images img{
-    width: 270px;
-    margin-bottom: 30px;
-    animation: image 2s infinite linear;
+    width: 230px;
+    margin: 30px;
     border-radius: 10px;
-}
-@keyframes image{
-    from{
-        box-shadow: 0px 0px 24px orange;
-    }
-    to{
-        box-shadow: 0px 0px 24px red;
-    }
+    cursor: pointer;
 }
 /*VIDEO*/
 .video{
     text-align: center;
-    color: orange;
+    color: #2570d3;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     position:absolute;
     margin-left: 2cm;
@@ -105,22 +99,23 @@ header li a:hover{
 @keyframes video{
     0%{
         margin-left: 50%;
+        color: #2570d3;
     }
     25%{
         margin-top: 40vh;
-        color: #fff;
+        color: #2570d3;
     }
     50%{
         margin-left: 0;
-        color: red;
+        color: #fff;
     }
     75%{
         margin-top: -30vh;
-        color: orange;
+        color: #2570d3;
     }
     100%{
         margin-left: 50%;
-        color: red;
+        color: #fff;
     }
 }
 /*RESPONSIVE*/
@@ -140,25 +135,19 @@ header li a:hover{
     }
     .images img{
         width: 200px;
-        margin-bottom: 30px;
-        margin: 0 auto;
-        margin-bottom: 30px;
-        text-align: center;
+        margin: 30px;
     }
 }
 @media(max-width:670px){
     .images img{
         width: 100px;
-        margin-bottom: 30px;
-        margin: 0 auto;
-        margin-bottom: 30px;
-        text-align: center;
+        margin: 15px;
     }
     header ul li{
         padding: 10px 5px;
     }
 }
-@media(max-width:510px){
+@media(max-width:560px){
     header ul li{
         padding: 10px 0px;
     }
@@ -169,20 +158,27 @@ header li a:hover{
     header h2{
         margin-left: 10px;
         color: #fff;
-        font-size: 18px;
+        font-size: 15px;
         padding: 5px;
-        background-color: orange;
+        background-color: #2570d3;
         border-radius: 10px;
     }
+    header li a{
+        font-size: 15px;
+    }
 }
-@media(max-width:410px){
+@media(max-width:430px){
     .m{
         display: none;
+    }
+    header h3{
+        font-size: 11px;
     }
 }
 ::-webkit-scrollbar{
     background-color: #110d0d;
+    width: 1px;
 }
 ::-webkit-scrollbar-thumb{
-    background-color:orange;
+    background-color:#2570d3;
 }
