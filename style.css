@@ -13,7 +13,24 @@ html{
 a{
     text-decoration: none;
 }
-/* AUDIO IN PAGE */
+/*======================================================== VIDEOS JOP AFTER PAGE WORKS =============================== */
+.recent-works{
+    text-align: center;
+    margin: 0 auto;
+    width: 70%;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+    border-radius: 1cm;
+}
+.recent-works video{
+    width: 90%;
+    padding: 1cm;
+}
+.recent-works p{
+    margin: 0 1cm;
+    margin-top:2cm;
+}
+/*============================== AUDIO IN PAGE ==============================*/
 audio{
     position: absolute;
     width: .7cm;
@@ -32,7 +49,7 @@ audio{
     border-radius: 12px;
     display: none;
 }
-/*  */
+/* ___________________________________________________ */
 hr{
     margin: 2cm auto;
     width: 60%;
@@ -40,7 +57,7 @@ hr{
     background-color: #fff;
     border-radius: 50%;
 }
-/* LOADING */
+/*======================================= LOADING====================================== */
 .loading{
     position: fixed;
     width: 100%;
@@ -94,7 +111,7 @@ hr{
         transform: rotate(3deg);
     }
 }
-/* TITLE OF PAGES DESGIN */
+/*============================== TITLE OF PAGES DESGIN ==============================*/
 .about-title,
 .experience-title,
 .offer-title,
@@ -105,7 +122,7 @@ hr{
     justify-content: center;
     margin-bottom: 1cm;
 }
-/* Up */
+/*============================== Up ============================================================*/
 .up{
     position: fixed;
     top: 90vh;
@@ -126,7 +143,7 @@ hr{
         top: 88vh;
     }
 }
-/* ________BAR________________________________________ */
+/* ==============================  BAR  ============================================================*/
 .bar{
     position: absolute;
     width: 100%;
@@ -162,7 +179,7 @@ hr{
     cursor: pointer;
     display: none;
 }
-/* _______HEADER______________________________________ */
+/*============================== HEADER ============================================================*/
 header{
     height: 1.8cm;
     background-color: #121a23;
@@ -171,7 +188,7 @@ header{
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    box-shadow: 0 1px 20px #fff;
+    box-shadow: 0 1px 10px rgba(255, 255, 255, 0.674);
     position: sticky;
     top: .1px;
     z-index: 3;
@@ -219,16 +236,27 @@ header .mood-logo .s1{
         color: #fff;
     }
 }
-/* sun and moon */
-header .mood-logo .fa-sun-plant-wilt,
+/*============================== sun and moon ==============================*/
+header .mood-logo .fa-sun,
 header .mood-logo .fa-cloud-moon{
     font-size: 20px;
     cursor: pointer;
 }
+header .mood-logo .fa-sun{
+    animation: sun 15s infinite linear;
+}
+@keyframes sun{
+    0%,100%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+}
 header #moon{
     display: none;
 }
-/* ________BAR-ICON  */
+/* ________BAR-ICON ============================== */
 header .bar-icon{
     display:none ;
     font-size: 22px;
@@ -679,10 +707,10 @@ main .items-left{
     width: 220px;
     border-radius: 10px;
     margin-bottom: 10px;
-    transition: all 2s;
+    transition: all 1s;
 }
 .works section img:hover{
-    transform: scale(90%);
+    transform: scale(115%);
 }
 .works section .p1,
 .boxes section .p1{
@@ -1048,7 +1076,7 @@ display: none;
     .contact .right form{
         width: 90%;
     }
-     .slide img{
+    .slide img{
         width: 200px;
     }
     .arrow-right-slide{
@@ -1070,6 +1098,9 @@ display: none;
     }
     .works{
         grid-template-columns: 1fr;
+    }
+    .recent-works{
+        width: 90%;
     }
 }
 @media(max-width:470px){
@@ -1095,6 +1126,9 @@ display: none;
     }
     .contact{
         width: 90%;
+    }
+    .recent-works video{
+        padding: 1cm 10px;
     }
 }
 /* ball media */
@@ -1147,4 +1181,73 @@ display: none;
             transform: rotate(360deg);
         }
     }
+}
+/* =============================== SETTING ===============================*/
+.setting{
+    position: fixed;
+    z-index: 10;
+    margin: 4cm 0 0 0;
+}
+.setting section{
+    display: flex;
+}
+.setting-box,
+.boxx-show{
+    background-color: #121a23;
+    width: 7cm;
+    height: 5cm;
+    border: 1px solid bisque;
+    border-radius:0 5px 5px 0;
+    border-left: none;
+    transition: all .3s;
+    margin-left: -7cm;
+}
+.boxx-show{
+    margin-left: 0;
+}
+.setting .row-setting{
+    position: relative;
+    margin-left: -1px;
+    margin-top: 1cm;
+    width: 20px;
+    height: 1cm;
+    background-color: #121a23;
+    border-radius: 0 5px 20px 0;
+    border: 1px solid bisque;
+    border-left: none;
+    cursor: pointer;
+}
+.setting .row-setting .fa-caret-right,
+.caret-show{
+    margin: 6.5px 0 0 3px;
+    font-size: 20px;
+    transition: all .3s ;
+}
+.caret-show{
+    transform: rotate(180deg);
+}
+
+.setting .setting-box .s{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.setting .setting-box .btn-daark{
+    width: 40px;
+    height: 20px;
+    background-color: #1c2733;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.setting .btnf,
+.btnf-show{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #0d5dc5;
+    transition: all .3s ;
+}
+.btnf-show{
+    margin-left: 20px;
 }
