@@ -125,3 +125,18 @@
 .dark-mode .slide::-webkit-scrollbar-thumb{
     background-color: rgb(229, 229, 229);
 }
+/* setting */
+.dark-mode .setting-box,
+.dark-mode .boxx-show{
+    background-color: #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.559);
+    border-left: none;
+}
+.dark-mode .setting .row-setting{
+    background-color: #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.559);
+    border-left: none;
+}
+.dark-mode .setting .setting-box .btn-daark{
+    background-color: #fff;
+}
