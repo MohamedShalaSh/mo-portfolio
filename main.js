@@ -1,24 +1,25 @@
-
+// ========================DARK MODE    AND PAGE SETTING 
+// ARROW IN SIDE LEFT
 const bdy=document.getElementById('body')
-const sun=document.getElementById('sun')
+const sun=document.getElementById('btn-daark')
 const moon=document.getElementById('moon')
 sun.onclick=function(){
     if(bdy.classList.contains('body')){
         bdy.classList='dark-mode';
-        sun.style.display="none"
-        moon.style.display="block"
     }
     else{
         bdy.classList='body';
     }
 }
-moon.onclick=function(){
-    if(bdy.classList.contains('dark-mode')){
-        bdy.classList='body';
-        moon.style.display="none"
-        sun.style.display="block"
-    }
-}
+document.querySelector(".btn-daark").addEventListener("click", () => {
+    document.querySelector(".btnf").classList.toggle("btnf-show");
+});
+document.querySelector("#row-setting").addEventListener("click", () => {
+    document.querySelector(".setting-box").classList.toggle("boxx-show");
+    document.querySelector(".fa-caret-right").classList.toggle("caret-show");
+
+});
+// ========================
 //WHEN CLICK BTN ABOUT ME 
 document.querySelector(".btn2").addEventListener("click", () => {
     aboutBTN.style.zIndex="5"
@@ -90,15 +91,7 @@ document.querySelector("#close-bar").addEventListener("click", () => {
     document.querySelector(".close-bar").classList.toggle("close-bar-show");
     bar.style.display=""
 });
-// ============================
-// const weba=document.getElementById("webb")
-// const all=document.getElementById("all")
-// console.log(w);
-// document.querySelector("#webb").addEventListener("click", () => {
-//     document.querySelectorAll(".web").classList.toggle("web-hide");
-//     all.removeAttribute("class")
-//     weba.setAttribute("class","pall")
-// });
+// ========================================================
 let i=1;
 const mo=document.getElementById('auto');
 const autowrite=()=>{
@@ -177,3 +170,5 @@ slide.addEventListener("mouseout",()=>{
     Rarrow.style.display=""
     Larrow.style.display=""
 })
+
+// ============================================================================================================================
